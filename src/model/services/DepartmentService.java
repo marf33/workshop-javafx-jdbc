@@ -14,4 +14,14 @@ public class DepartmentService {
 	public List<Department> findAll(){
 		return dao.findAll();
 	}
+	
+	//Verificar se tem que se inserir um novo departamento ou atualizar
+	public void saveOrUpdate (Department obj) {
+		if (obj.getId() == null) {
+			dao.insert(obj);
+		}
+		else {
+			dao.update(obj);
+		}
+	}
 }
