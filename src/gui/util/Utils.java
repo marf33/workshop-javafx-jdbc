@@ -31,6 +31,17 @@ public class Utils {
 		}
 
 	}
+	
+	
+	// Converter valor da combo para inteiro
+		public static Double tryParseToDouble(String str) {
+			try {
+				return Double.parseDouble(str);
+			} catch (NumberFormatException e) {
+				return null;
+			}
+
+		}
 
 	// Formatar data Table Column
 	public static <T> void formatTableColumnDate(TableColumn<T, Date> tableColumn, String format) {
